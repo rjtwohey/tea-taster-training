@@ -6,9 +6,9 @@ import {
   IonToolbar,
 } from "@ionic/react";
 import ExploreContainer from "../components/ExploreContainer";
-import "./Home.css";
+import "./TeaPage.css";
 
-const Home: React.FC = () => {
+const TeaPage: React.FC = () => {
   return (
     <IonPage>
       <IonHeader>
@@ -28,4 +28,4 @@ const Home: React.FC = () => {
   );
 };
 
-export default Home;
+export default TeaPage;
