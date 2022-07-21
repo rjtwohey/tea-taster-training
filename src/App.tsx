@@ -1,6 +1,11 @@
 import { useEffect } from "react";
 import { Redirect, Route } from "react-router-dom";
-import { IonApp, IonRouterOutlet, setupIonicReact } from "@ionic/react";
+import {
+  IonApp,
+  IonRouterOutlet,
+  isPlatform,
+  setupIonicReact,
+} from "@ionic/react";
 import { IonReactRouter } from "@ionic/react-router";
 import Home from "./pages/Home";
 import { SplashScreen } from "@capacitor/splash-screen";
@@ -28,7 +33,7 @@ setupIonicReact();
 
 const App: React.FC = () => {
   useEffect(() => {
-    SplashScreen.hide();
+    if (isPlatform("capacitor")) SplashScreen.hide();
   }, []);
 
   return (
