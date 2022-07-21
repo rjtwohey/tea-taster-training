@@ -1,10 +1,15 @@
-import { CapacitorConfig } from '@capacitor/cli';
+import { CapacitorConfig } from "@capacitor/cli";
 
 const config: CapacitorConfig = {
-  appId: 'io.ionic.starter',
-  appName: 'tea-taster',
-  webDir: 'build',
-  bundledWebRuntime: false
+  appId: "io.ionic.teataster",
+  appName: "Tea Tasting Notes",
+  webDir: "build",
+  bundledWebRuntime: false,
+  plugins: {
+    SplashScreen: {
+      launchAutoHide: false,
+    },
+  },
 };
 
 export default config;
