@@ -8,6 +8,7 @@ import {
 } from "@ionic/react";
 import { IonReactRouter } from "@ionic/react-router";
 import TeaPage from "./tea/TeaPage";
+import LoginPage from "./login/LoginPage";
 import { SplashScreen } from "@capacitor/splash-screen";
 
 /* Core CSS required for Ionic components to work properly */
@@ -28,6 +29,7 @@ import "@ionic/react/css/display.css";
 
 /* Theme variables */
 import "./theme/variables.css";
+import "./theme/global.css";
 
 setupIonicReact();
 
@@ -40,11 +42,14 @@ const App: React.FC = () => {
     <IonApp>
       <IonReactRouter>
         <IonRouterOutlet>
-          <Route exact path="/home">
+          <Route exact path="/tea">
             <TeaPage />
           </Route>
+          <Route exact path="/login">
+            <LoginPage />
+          </Route>
           <Route exact path="/">
-            <Redirect to="/home" />
+            <Redirect to="/tea" />
           </Route>
         </IonRouterOutlet>
       </IonReactRouter>
